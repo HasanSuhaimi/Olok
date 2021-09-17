@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "olok-pre": {
+      "hosting": {
+        "my-app": [
+          "olok-pre"
+        ]
+      }
+    }
+  }
+}
