@@ -1,7 +1,7 @@
 <!-- Top navigation -->
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-    <img class="brand-logo" src="assets/logo-positronx-white.svg" alt="positronX.io Logo">
+    <img class="brand-logo" src="assets/logo-positronx-white.svg">
   </a>
 </nav>
 
@@ -17,10 +17,15 @@
               <i class="fas fa-user"></i>User Profile
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="fas fa-arrow-alt-circle-right"></i>Find Match
+            </a>
+          </li>
           <!-- Calling SignOut() Api from AuthService -->
           <li class="nav-item">
             <a class="nav-link" (click)="authService.SignOut()">
-              <i class="fas fa-sign-out-alt"></i>Log out
+              <i class="fas fa-sign-out-alt"></i>Log Out
             </a>
           </li>
         </ul>
@@ -49,6 +54,7 @@
             </div>
           </div>
         </div>
+
 
       </div>
     </main>

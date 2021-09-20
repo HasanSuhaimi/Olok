@@ -2,7 +2,7 @@
   "targets": {
     "olok-pre": {
       "hosting": {
-        "my-app": [
+        "olok-app": [
           "olok-pre"
         ]
       }

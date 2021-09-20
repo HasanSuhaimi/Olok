@@ -1,27 +1,19 @@
 import { NgModule } from '@angular/core';
-// Required services for navigation
-import { Routes, RouterModule } from '@angular/router';
-
-// Import all the components for which navigation service has to be activated 
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { AuthGuard } from "./shared/guard/auth.guard";
-import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { DashboardMComponent } from './components/dashboard-m/dashboard-m.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
-  { path: 'sign-in', component: SignInComponent },
-  { path: 'register-user', component: SignUpComponent },
+
+  { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: 'verify-email-address', component: VerifyEmailComponent }
+  { path: 'dashboardM', component: DashboardMComponent }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule { }

@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "my-app",
-      "public": "dist/my-app",
+      "target": "olok-app",
+      "public": "dist/olok-app",
       "ignore": [
         "**/.*"
       ],

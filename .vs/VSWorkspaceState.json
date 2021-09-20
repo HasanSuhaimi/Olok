@@ -5,10 +5,11 @@
     "\\src\\app",
     "\\src\\app\\components",
     "\\src\\app\\components\\dashboard",
+    "\\src\\app\\components\\login",
     "\\src\\app\\shared",
     "\\src\\app\\shared\\services",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\shared\\services\\auth.service.ts",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }

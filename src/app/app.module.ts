@@ -1,59 +1,48 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment';
+import { LoginComponent } from './components/login/login.component';
+import { AuthService } from "./shared/services/auth.service";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DashboardMComponent } from './components/dashboard-m/dashboard-m.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { TaskComponent } from './task/task.component';
-
-import { MatCardModule } from '@angular/material/card';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-
-import { MatGridListModule } from '@angular/material/grid-list';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
-import { AppRoutingModule } from './app-routing.module';
-
-import { AuthService } from "./shared/services/auth.service";
-
-// Firebase services + enviorment module
-import { AngularFireModule } from "@angular/fire/compat";
-import { AngularFireAuthModule } from "@angular/fire/compat/auth";
-import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
-import { environment } from '../environments/environment';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent,
+    LoginComponent,
     DashboardComponent,
-    SignInComponent,
-    SignUpComponent,
-    ForgotPasswordComponent,
-    VerifyEmailComponent
+    DashboardMComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
     MatIconModule,
-    MatCardModule,
-    DragDropModule,
-    MatButtonToggleModule,
-    MatGridListModule,
-    AppRoutingModule,
-
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
+    MatDividerModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
